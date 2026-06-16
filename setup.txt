@@ -1,0 +1,26 @@
+//setup da vm
+apt update
+apt install -y python3
+apt install -y python3-pip
+apt install -y git
+apt install -y openssl
+apt install -y tar
+apt install -y nmap
+apt install -y python3-bcrypt
+
+//grupos e usuarios
+groupadd securechain_admin
+groupadd securechain_analista
+groupadd securechain_visitante
+
+useradd -m -G securechain_admin administrador
+useradd -m -G securechain_analista analista
+useradd -m -G securechain_visitante visitante
+passwd administrador (admin)
+passwd analista (analista)
+passwd visitante (user)
+
+//permissoes
+chown -R administrador:securechain_admin [path do projeto]
+chmod -R 750 [path do projeto]
+chmod -R 755 [path do projeto/auditoria/relatorios]
