@@ -1,7 +1,7 @@
 import subprocess
 from datetime import datetime
 
-arquivo = f"audit_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
+arquivo = f"auditoria/relatorios/audit_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
 
 with open(arquivo, 'w') as f:
 

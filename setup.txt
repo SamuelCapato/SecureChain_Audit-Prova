@@ -24,3 +24,5 @@ passwd visitante (user)
 chown -R administrador:securechain_admin [path do projeto]
 chmod -R 750 [path do projeto]
 chmod -R 755 [path do projeto/auditoria/relatorios]
+
+chmod +x backup/backup.sh
