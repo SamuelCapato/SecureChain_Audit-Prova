@@ -1,0 +1,65 @@
+[
+    {
+        "id": 0,
+        "timestamp": "2026-06-18T23:27:53.174924",
+        "evento": "GENESIS - Blockchain inicializada",
+        "hash_anterior": "0000000000000000000000000000000000000000000000000000000000000000",
+        "hash_atual": "c572a586e6415860e1c4a783859cfa078b3cd60b3c35e33dbf39d47b1408ebde"
+    },
+    {
+        "id": 1,
+        "timestamp": "2026-06-18T23:28:09.658449",
+        "evento": "SETUP INICIAL: administrador 'Garcia' criado",
+        "hash_anterior": "c572a586e6415860e1c4a783859cfa078b3cd60b3c35e33dbf39d47b1408ebde",
+        "hash_atual": "2dc6dae1e2e461ed62c6e8244b7bbabdd1c8319cb3da68b10035dc1e273e3614"
+    },
+    {
+        "id": 2,
+        "timestamp": "2026-06-18T23:34:32.566533",
+        "evento": "FALHA DE LOGIN: usuário='Garcia' | tentativa=1",
+        "hash_anterior": "2dc6dae1e2e461ed62c6e8244b7bbabdd1c8319cb3da68b10035dc1e273e3614",
+        "hash_atual": "761dfc4310f776857509090917b1638750ab81f27f347331bb6e907c4508f191"
+    },
+    {
+        "id": 3,
+        "timestamp": "2026-06-18T23:34:41.794531",
+        "evento": "LOGIN: Garcia | perfil=admin | timestamp=2026-06-18T23:34:41.793594",
+        "hash_anterior": "761dfc4310f776857509090917b1638750ab81f27f347331bb6e907c4508f191",
+        "hash_atual": "c59f31e0494478f5921364a6b89d3e63e19c7ddb0c603415681767c7592c00f3"
+    },
+    {
+        "id": 4,
+        "timestamp": "2026-06-19T22:46:32.644102",
+        "evento": "LOGIN: Garcia | perfil=admin | timestamp=2026-06-19T22:46:32.643680",
+        "hash_anterior": "c59f31e0494478f5921364a6b89d3e63e19c7ddb0c603415681767c7592c00f3",
+        "hash_atual": "ba87fe1190657844b1abb053c31d9a32301664210b9b70cd0bc3e43a1576657d"
+    },
+    {
+        "id": 5,
+        "timestamp": "2026-06-19T22:47:29.201136",
+        "evento": "AUDITORIA DO SISTEMA EXECUTADA | arquivo=/home/garcola/Documents/SecureChain_Audit-Prova/securechain/auditoria/relatorios/audit_2026-06-19_22-47-29.txt",
+        "hash_anterior": "ba87fe1190657844b1abb053c31d9a32301664210b9b70cd0bc3e43a1576657d",
+        "hash_atual": "f7cc7d865528f4eb9acc2d8195f39f98c3469b566d0e6b281361f478aabff550"
+    },
+    {
+        "id": 6,
+        "timestamp": "2026-06-19T22:47:59.293201",
+        "evento": "USUÁRIO CADASTRADO: Samuel Ceiling starer | perfil=visitante",
+        "hash_anterior": "f7cc7d865528f4eb9acc2d8195f39f98c3469b566d0e6b281361f478aabff550",
+        "hash_atual": "2617522efcee7902d306fa66fb12603926444e220f3460885af0526d78522b77"
+    },
+    {
+        "id": 7,
+        "timestamp": "2026-06-19T22:48:23.253426",
+        "evento": "USUÁRIO REMOVIDO: Samuel Ceiling starer",
+        "hash_anterior": "2617522efcee7902d306fa66fb12603926444e220f3460885af0526d78522b77",
+        "hash_atual": "19b635597d101a0a52df5e3ed5f913bf851525338f1b9b192a4d6da13ab2c165"
+    },
+    {
+        "id": 8,
+        "timestamp": "2026-06-19T22:48:39.311763",
+        "evento": "LOGOUT: Garcia",
+        "hash_anterior": "19b635597d101a0a52df5e3ed5f913bf851525338f1b9b192a4d6da13ab2c165",
+        "hash_atual": "fe55f340fbc36adc097e8b4aa8531a3364198e3fe66d648dcd6bec4bcec9edcb"
+    }
+]

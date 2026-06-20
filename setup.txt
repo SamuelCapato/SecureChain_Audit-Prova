@@ -1,28 +1,81 @@
-//setup da vm
-apt update
-apt install -y python3
-apt install -y python3-pip
-apt install -y git
-apt install -y openssl
-apt install -y tar
-apt install -y nmap
-apt install -y python3-bcrypt
+# ===========================================================================
+# SecureChain Audit — Setup da VM Debian 13
+# Execute todos os comandos abaixo como root (sudo su ou sudo -i)
+# ===========================================================================
 
-//grupos e usuarios
+# ---------------------------------------------------------------------------
+# 1. Atualizar o sistema e instalar dependências
+# ---------------------------------------------------------------------------
+apt update && apt upgrade -y
+apt install -y python3 python3-pip git openssl tar nmap net-tools iproute2
+pip3 install bcrypt --break-system-packages
+
+# ---------------------------------------------------------------------------
+# 2. Clonar ou copiar o repositório (na sua Debian 13)
+# ---------------------------------------------------------------------------
+
+# ---------------------------------------------------------------------------
+# 3. Criar grupos de segurança
+# ---------------------------------------------------------------------------
 groupadd securechain_admin
 groupadd securechain_analista
 groupadd securechain_visitante
 
-useradd -m -G securechain_admin administrador
-useradd -m -G securechain_analista analista
-useradd -m -G securechain_visitante visitante
-passwd administrador (admin)
-passwd analista (analista)
-passwd visitante (user)
+# ---------------------------------------------------------------------------
+# 4. Criar usuários do SO com seus respectivos grupos
+# ---------------------------------------------------------------------------
+useradd -m -s /bin/bash -G securechain_admin     administrador
+useradd -m -s /bin/bash -G securechain_analista  analista
+useradd -m -s /bin/bash -G securechain_visitante visitante
 
-//permissoes
-chown -R administrador:securechain_admin [path do projeto]
-chmod -R 750 [path do projeto]
-chmod -R 755 [path do projeto/auditoria/relatorios]
+# Definir senhas (substitua pelas senhas escolhidas pela equipe)
+passwd administrador
+passwd analista
+passwd visitante
 
-chmod +x backup/backup.sh
+# ---------------------------------------------------------------------------
+# 5. Aplicar permissões no projeto (Menor Privilégio + Segregação de Funções)
+# ---------------------------------------------------------------------------
+PROJETO=/opt/securechain
+
+# Dono geral: administrador
+chown -R administrador:securechain_admin "$PROJETO"
+
+# Permissão padrão: dono lê/escreve/executa; grupo lê/executa; outros: nada
+chmod -R 750 "$PROJETO"
+
+# Relatórios podem ser lidos pelo visitante (755 = todos leem)
+chmod -R 755 "$PROJETO/securechain/auditoria/relatorios"
+
+# Usuários e blockchain: apenas o administrador acessa
+chmod -R 700 "$PROJETO/securechain/usuarios"
+chmod -R 700 "$PROJETO/securechain/blockchain"
+chmod -R 700 "$PROJETO/securechain/logs"
+
+# Script de backup: executável
+chmod +x "$PROJETO/securechain/backup/backup.sh"
+
+# ---------------------------------------------------------------------------
+# 6. Configurar variável de ambiente para o backup (não expõe senha no shell)
+# ---------------------------------------------------------------------------
+# Adicione ao final do /etc/environment (vale para todos os usuários):
+echo 'BACKUP_PASS="SuaSenhaForteSuperSecreta123!"' >> /etc/environment
+
+# Ou defina manualmente antes de rodar o backup:
+# export BACKUP_PASS="SuaSenhaForteSuperSecreta123!"
+
+# ---------------------------------------------------------------------------
+# 7. Adicionar analista ao grupo para leitura dos módulos
+# ---------------------------------------------------------------------------
+usermod -aG securechain_admin analista   # analista pode executar os módulos
+
+# ---------------------------------------------------------------------------
+# 8. Verificar instalação
+# ---------------------------------------------------------------------------
+python3 --version
+git --version
+openssl version
+nmap --version
+python3 -c "import bcrypt; print('bcrypt OK')"
+
+echo "Setup concluído!"
