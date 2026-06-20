@@ -61,5 +61,75 @@
         "evento": "LOGOUT: Garcia",
         "hash_anterior": "19b635597d101a0a52df5e3ed5f913bf851525338f1b9b192a4d6da13ab2c165",
         "hash_atual": "fe55f340fbc36adc097e8b4aa8531a3364198e3fe66d648dcd6bec4bcec9edcb"
+    },
+    {
+        "id": 9,
+        "timestamp": "2026-06-20T11:53:13.567515",
+        "evento": "LOGIN: Garcia | perfil=admin | timestamp=2026-06-20T11:53:13.566688",
+        "hash_anterior": "fe55f340fbc36adc097e8b4aa8531a3364198e3fe66d648dcd6bec4bcec9edcb",
+        "hash_atual": "b94fe80e7aa0eb3e17df3d52470ad14914c1f86450e1fd38a0ef1aae2136ad34"
+    },
+    {
+        "id": 10,
+        "timestamp": "2026-06-20T12:00:02.819784",
+        "evento": "BASELINE DE INTEGRIDADE CRIADO",
+        "hash_anterior": "b94fe80e7aa0eb3e17df3d52470ad14914c1f86450e1fd38a0ef1aae2136ad34",
+        "hash_atual": "d141095993fa967b5c49a5fd75251b13524bb9eeb3242f989cc8be3f236a8030"
+    },
+    {
+        "id": 11,
+        "timestamp": "2026-06-20T12:01:54.475495",
+        "evento": "USUÁRIO CADASTRADO: Samuek | perfil=visitante",
+        "hash_anterior": "d141095993fa967b5c49a5fd75251b13524bb9eeb3242f989cc8be3f236a8030",
+        "hash_atual": "2d389a2bf9202281d5385e2208be1b9f9d7afb2d39a21a5bab24060612e96c25"
+    },
+    {
+        "id": 12,
+        "timestamp": "2026-06-20T12:02:06.149602",
+        "evento": "LOGOUT: Garcia",
+        "hash_anterior": "2d389a2bf9202281d5385e2208be1b9f9d7afb2d39a21a5bab24060612e96c25",
+        "hash_atual": "3a0ffa273f1b6e72997e47b26fc9af91624492f8942dbccb6259aabfc7f9c966"
+    },
+    {
+        "id": 13,
+        "timestamp": "2026-06-20T12:02:14.340791",
+        "evento": "LOGIN: Samuek | perfil=visitante | timestamp=2026-06-20T12:02:14.340136",
+        "hash_anterior": "3a0ffa273f1b6e72997e47b26fc9af91624492f8942dbccb6259aabfc7f9c966",
+        "hash_atual": "bcb35bfe1aa5accba59f0ac4798413561a0e6306bd141ec5dd4d26933e88d0ac"
+    },
+    {
+        "id": 14,
+        "timestamp": "2026-06-20T12:03:07.686941",
+        "evento": "LOGOUT: Samuek",
+        "hash_anterior": "bcb35bfe1aa5accba59f0ac4798413561a0e6306bd141ec5dd4d26933e88d0ac",
+        "hash_atual": "d3eba2c6c765433bcf6a4d91afff15d8287db426f4ee60c110f2bf34c4182a16"
+    },
+    {
+        "id": 15,
+        "timestamp": "2026-06-20T12:04:23.980033",
+        "evento": "LOGIN: Samuek | perfil=visitante | timestamp=2026-06-20T12:04:23.978744",
+        "hash_anterior": "d3eba2c6c765433bcf6a4d91afff15d8287db426f4ee60c110f2bf34c4182a16",
+        "hash_atual": "d840a4235f9d76d16371083199d898009ac22d6e834919a6136561fb065b2376"
+    },
+    {
+        "id": 16,
+        "timestamp": "2026-06-20T12:04:32.235720",
+        "evento": "AUDITORIA DO SISTEMA EXECUTADA | arquivo=/home/garcola/Documents/SecureChain_Audit-Prova/securechain/auditoria/relatorios/audit_2026-06-20_12-04-32.txt",
+        "hash_anterior": "d840a4235f9d76d16371083199d898009ac22d6e834919a6136561fb065b2376",
+        "hash_atual": "243e61ebb67e847e7942f0fd35ddc3560012b11f166cdec6b51960dc374b815c"
+    },
+    {
+        "id": 17,
+        "timestamp": "2026-06-20T12:07:15.204470",
+        "evento": "LOGOUT: Samuek",
+        "hash_anterior": "243e61ebb67e847e7942f0fd35ddc3560012b11f166cdec6b51960dc374b815c",
+        "hash_atual": "47d7fe36dd9d242a552be7a664521c0d75645c94f18b23507aafe97773a0736b"
+    },
+    {
+        "id": 18,
+        "timestamp": "2026-06-20T12:07:23.660631",
+        "evento": "LOGIN: Garcia | perfil=admin | timestamp=2026-06-20T12:07:23.660044",
+        "hash_anterior": "47d7fe36dd9d242a552be7a664521c0d75645c94f18b23507aafe97773a0736b",
+        "hash_atual": "58c045a7176c6e8dd7d349dff73f6d812744b0a9d2fbb37057d71df650a2d28b"
     }
 ]

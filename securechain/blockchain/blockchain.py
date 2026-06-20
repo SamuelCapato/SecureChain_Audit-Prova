@@ -15,9 +15,6 @@ class Blockchain:
         if len(self.chain) == 0:
             self.genesis()
 
-    # ------------------------------------------------------------------ #
-    # CORREÇÃO: era "claculate_hash" (typo) — renomeado para calculate_hash
-    # ------------------------------------------------------------------ #
     def calculate_hash(self, block):
         """Recalcula o SHA-256 de um bloco com base em seus campos fixos."""
         data = (
@@ -68,10 +65,6 @@ class Blockchain:
                 return json.load(f)
         return []
 
-    # ------------------------------------------------------------------ #
-    # CORREÇÃO: validate() agora verifica o bloco genesis (índice 0)
-    # e retorna o número do bloco corrompido, não apenas True/False (RF07)
-    # ------------------------------------------------------------------ #
     def validate(self):
         """
         Percorre toda a cadeia verificando:

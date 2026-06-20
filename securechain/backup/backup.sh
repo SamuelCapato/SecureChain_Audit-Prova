@@ -1,17 +1,13 @@
 #!/bin/bash
-# =============================================================================
 # backup.sh — Backup seguro com compactação e criptografia AES-256
 # Parte do projeto SecureChain Audit (RF05)
 #
 # Uso: execute a partir do diretório securechain/
 #   bash backup/backup.sh
-# =============================================================================
 
 set -euo pipefail   # encerra imediatamente em caso de erro
 
-# --------------------------------------------------------------------------- #
 # Configurações
-# --------------------------------------------------------------------------- #
 DATA=$(date +"%Y-%m-%d-%H-%M-%S")
 ARQUIVO="backup-${DATA}.tar.gz"
 TEMP="/tmp/${ARQUIVO}"
@@ -20,12 +16,7 @@ DESTINO_ENC="${DESTINO_DIR}/backup-${DATA}.tar.gz.enc"
 LOG="${DESTINO_DIR}/backup.log"
 DOCS_DIR="$(dirname "$0")/../documentos"   # securechain/documentos/
 
-# --------------------------------------------------------------------------- #
 # Chave de criptografia via variável de ambiente (nunca exposta no histórico)
-# ------------------------------------------------------------------ #
-# CORREÇÃO: senha não fica mais hardcoded na linha de comando.
-# Defina a variável antes de rodar:  export BACKUP_PASS="sua_senha_forte"
-# --------------------------------------------------------------------------- #
 if [ -z "${BACKUP_PASS:-}" ]; then
     echo "[ERRO] Variável BACKUP_PASS não definida."
     echo "       Execute: export BACKUP_PASS=\"sua_senha_forte\""
@@ -42,9 +33,6 @@ echo "[BACKUP] Compactação concluída: ${TEMP}"
 
 # Passo 2: Criptografia AES-256-CBC com OpenSSL
 # -pbkdf2 usa PBKDF2 para derivar a chave — mais seguro que -md md5 padrão
-# ------------------------------------------------------------------ #
-# CORREÇÃO: aspas corrigidas no -out (estava: -out "$DESTINO.enc sem fechar)
-# ------------------------------------------------------------------ #
 openssl enc -aes-256-cbc -salt -pbkdf2 \
     -in  "$TEMP" \
     -out "$DESTINO_ENC" \

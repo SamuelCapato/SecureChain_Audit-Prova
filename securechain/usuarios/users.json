@@ -3,5 +3,10 @@
         "senha": "$2b$12$71EILzcUvGsEMA6bSiU7NeMl/rUG0gbYpNw6l/xQHy58xgVSTmfDG",
         "perfil": "admin",
         "criado": "2026-06-18T23:28:09.657646"
+    },
+    "Samuek": {
+        "senha": "$2b$12$u999pOGkoKKYllsOILyNVezeck6g/iP.sUG8MSXRM0LM7VfAHqQky",
+        "perfil": "visitante",
+        "criado": "2026-06-20T12:01:54.473688"
     }
 }

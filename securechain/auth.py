@@ -3,10 +3,6 @@ import bcrypt
 from datetime import datetime
 from pathlib import Path
 
-# ------------------------------------------------------------------ #
-# CORREÇÃO: caminho absoluto hardcoded removido — agora usa Path relativo
-# ao próprio arquivo auth.py, funciona em qualquer máquina
-# ------------------------------------------------------------------ #
 USERS_FILE = Path(__file__).parent / "usuarios" / "users.json"
 
 

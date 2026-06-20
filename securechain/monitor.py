@@ -4,9 +4,6 @@ import os
 from pathlib import Path
 from datetime import datetime
 
-# ------------------------------------------------------------------ #
-# CORREÇÃO: caminhos absolutos hardcoded removidos — usa Path relativo
-# ------------------------------------------------------------------ #
 BASE_DIR  = Path(__file__).parent
 BASELINE  = BASE_DIR / "baseline.json"
 DOCS      = BASE_DIR / "documentos"
